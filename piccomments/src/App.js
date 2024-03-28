@@ -1,9 +1,16 @@
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getBlogDetails } from "./blogs";
+import Home from "./components/Home";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBlogDetails());
+  });
   return (
-    <div className="text-red-900">
-     Hello Sandhya
-     I am Here
+    <div className="">
+      <Home />
     </div>
   );
 }
